@@ -1,0 +1,19 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: jd-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangjianyu123/config-1908.git
+          username: wangjianyu123
+          password: wjy09151019
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka

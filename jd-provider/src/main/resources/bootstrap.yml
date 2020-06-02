@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: jd-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/1908?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: 123
+  cloud:
+    config:
+      #分支
+      label: master
+      #环境 端口号不要冲突
+      profile: test
+      #config server 服务发现
+      uri: http://localhost:8093/
+
+mybatis:
+  type-aliases-package:
